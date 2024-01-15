@@ -30,7 +30,7 @@ export default function useInitializeBuilder(props, context, options: Initialize
 
   const initializeBuilder = (): Promise<any> => {
     if (_builder.value) {
-      _builder.instance.destroy(true);
+      _builder.value.instance.destroy(true);
     }
 
     _builder.value = new FormioFormBuilder(options.formioRef.value, props.form, props.options);
